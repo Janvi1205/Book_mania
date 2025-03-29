@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="webproj.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+
+        function details(bookId) {
+            document.getElementById("maincontent").style.display = "none";
+            document.getElementById("heading").style.display = "none";
+            document.getElementById("goback").style.display = "flex";
+            document.getElementById(bookId + "-details").style.display = "block";
+
+        }
+        function submitFeedback() {
+            document.getElementById("book1-details").style.display = "none";
+            document.getElementById("book2-details").style.display = "none";
+
+            document.getElementById("maincontent").style.display = "flex"; // i havent used block here coz the books were displayed one below the other which i didnt want!
+            document.getElementById("heading").style.display = "block";
+            document.getElementById("book3-details").style.display = "none";
+        }
+        function GOBack() {
+            document.getElementById("book1-details").style.display = "none";
+            document.getElementById("book2-details").style.display = "none";
+            document.getElementById("goback").style.display = "none";
+
+            document.getElementById("maincontent").style.display = "flex"; // i havent used block here coz the books were displayed one below the other which i didnt want!
+            document.getElementById("heading").style.display = "block";
+            document.getElementById("book3-details").style.display = "none";
+            document.getElementById("book4-details").style.display = "none";
+            document.getElementById("book5-details").style.display = "none";
+            document.getElementById("book6-details").style.display = "none";
+
+        }
+        function back() {
+            document.getElementById("maincontent").style.display = "none";
+            document.getElementById("maincontent2").style.display = "flex";
+
+
+        }
+        function next() {
+            document.getElementById("maincontent").style.display = "none";
+            document.getElementById("maincontent2").style.display = "flex";
+
+        }
+        function back2() {
+            document.getElementById("maincontent2").style.display = "none";
+            document.getElementById("maincontent").style.display = "flex";
+
+
+        }
+        function next2() {
+            document.getElementById("maincontent2").style.display = "none";
+            document.getElementById("maincontent").style.display = "flex";
+
+        }
+        function details2(bookId) {
+            document.getElementById("maincontent2").style.display = "none";
+            document.getElementById("heading").style.display = "none";
+            document.getElementById("goback").style.display = "flex";
+            document.getElementById(bookId + "-details").style.display = "block";
+            document.getElementById("maincontent1").style.display = "none";
+
+        }
+        function submitFeedback2() {
+            document.getElementById("book1-details").style.display = "none";
+            document.getElementById("book2-details").style.display = "none";
+            document.getElementById("maincontent").style.display = "flex"; // i havent used block here coz the books were displayed one below the other which i didnt want!
+            document.getElementById("heading").style.display = "block";
+            document.getElementById("book3-details").style.display = "none";
+            document.getElementById("book4-details").style.display = "none";
+            document.getElementById("book5-details").style.display = "none";
+            document.getElementById("book6-details").style.display = "none";
+        }
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <div class="glow" style="top: 20%; left: 10%;"></div>
+    <div class="glow" style="top: 90%; left: 80%;"></div>
+    <div class="glow" style="top: 80%; left: 40%;"></div>
+    <div class="glow" style="top: 50%; left: 90%;"></div>
+
+
+    <div class="header">
+        <span>Welcome to Book Showcase</span>
+
+    </div>
+    <span id="goback" onclick="GOBack()"
+        style="display: none; margin-left: 1150px;margin-top: -36px;position: absolute;color: white;cursor:pointer;font-family: Arial, Helvetica, sans-serif;">Go
+        back</span>
+
+    <div id="heading" style="font-weight: bold;font-size:25px;">
+        Explore Self Help Books
+    </div>
+    <section id="maincontent">
+
+
+        <i onclick="back()" style="margin-top: 150px; margin-left: -10px; font-size: 40px;cursor: pointer"
+            class="bi bi-arrow-left-circle-fill"></i>
+           
+
+
+        <div class="bookcontainer" onclick="details('book1')">
+            <div class="book">
+                <div class="frontside"
+                    style="background-image: url(public/images/book1.png); background-size: contain;"></div>
+                <div class="backside">Click for details </div>
+
+            </div>
+        </div>
+
+
+        <div class="bookcontainer" onclick="details('book2')">
+            <div class="book">
+                <div class="frontside" style="background-image:url(public/images/book2.png) ;background-size: contain;">
+                </div>
+                <div class="backside">Click for details </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="bookcontainer" onclick="details('book3')">
+            <div class="book">
+                <div class="frontside" style="background-image:url(public/images/book3.png) ;background-size: contain;">
+                </div>
+                <div class="backside">Click for details </div>
+
+            </div>
+
+
+        </div>
+        
+        <i onclick="next()"
+            style=" margin-top: 150px;margin-left: 70px;position: relative;font-size: 40px;cursor: pointer"
+            class="bi bi-arrow-right-circle-fill"></i>
+
+
+
+
+    </section>
+    <section id="maincontent2" style="display: none;">
+
+
+        <i onclick="back2()" style="margin-top: 150px;margin-left: -10px;font-size: 40px;cursor: pointer;"
+            class="bi bi-arrow-left-circle-fill"></i>
+
+
+
+        <div class="bookcontainer" onclick="details2('book4')">
+            <div class="book">
+                <div class="frontside"
+                    style="background-image: url(public/images/book4.jpg); background-size: contain;">
+                </div>
+                <div class="backside">Click for details </div>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="bookcontainer" onclick="details2('book5')">
+            <div class="book">
+                <div class="frontside"
+                    style="background-image:url(public/images/book5.jpg) ;background-size: contain;">
+                </div>
+                <div class="backside">Click for details </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="bookcontainer" onclick="details2('book6')">
+            <div class="book">
+                <div class="frontside"
+                    style="background-image:url(public/images/book6.jpg) ;background-size: contain;">
+                </div>
+                <div class="backside">Click for details </div>
+
+            </div>
+
+
+        </div>
+        <i onclick="next2()"
+            style=" margin-top: 150px;margin-left: 70px;position: relative;font-size: 40px;cursor: pointer"
+            class="bi bi-arrow-right-circle-fill"></i>
+
+
+
+
+    </section>
+
+    <!-- book1 details -->
+
+    <div id="book1-details" class="book-details">
+        <div class="book-title"
+            style="display: flex;justify-content: center; font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: 20px;">
+            Book 1: Rewire your Anxious Brain</div>
+        <div class="book-image" style="display: flex;justify-content: center;">
+            <img style="width: 230px;height: 290px;margin-top: 20px;border-radius: 20px;" src="public/images/book1.png"
+                alt="">
+        </div>
+        <div>
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Genre
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        Self-help
+                    </li>
+                    <li>Psychology</li>
+                    <li>Mental Health</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Index Page
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        Introduction
+                    </li>
+                    <li>Chapter 1: Understanding Anxiety and Its Origin </li>
+                    <li>Chapter 2: The Impact of Overthinking on Mental Well-being</li>
+                    <li>Chapter 3: Techniques to Rewire Your Brain</li>
+                    <li>(More chapters continue...)</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Authors
+                </summary>
+                <p style="margin-left: 22px;">Nick Trenton
+                </p>
+
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Overview
+                </summary>
+                <p style="margin-left: 22px;">This book addresses the challenges of an overactive and anxious mind,
+                    offering readers insights into the root causes of anxiety and overthinking. It provides practical
+                    strategies to rewire thought patterns, embrace mindfulness, and cultivate a calm and present-focused
+                    mindset. The author emphasizes understanding the internal processes that lead to anxiety and offers
+                    tools to manage and overcome these patterns. </p>
+
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Purchase Links
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        <a href="https://amzn.in/d/1E0ZgBf">Amazon</a>
+                    </li>
+                    <li>
+                        <a href="https://dl.flipkart.com/s/vCsTJmNNNN ">Flipkart</a>
+
+                    </li>
+                </ul>
+            </details>
+
+        </div>
+
+        <div
+            style="margin-left: 35px;margin-top: 30px; font-weight: bold;font-size: 20px;font-family: Arial, Helvetica, sans-serif;">
+            Feedback Form<br><br></div>
+
+        <div class="form-container">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback"></textarea>
+            </div>
+
+            <button class="submit-button" onclick="submitFeedback()">Submit Feedback</button>
+        </div>
+
+
+    </div>
+
+
+    <!-- Book2-details -->
+
+    <div id="book2-details" class="book-details">
+        <div class="book-title"
+            style="display: flex;justify-content: center; font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: 20px;">
+            Book 2: How to Stop Worrying and Start Living</div>
+        <div class="book-image" style="display: flex;justify-content: center;">
+            <img style="width: 230px;height: 290px;margin-top: 20px; border-radius: 20px;" src="public/images/book2.png"
+                alt="">
+        </div>
+        <div>
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Genre
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        Self-help
+                    </li>
+                    <li>Psychology</li>
+                    <li>Personal Development</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Index Page
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        Introduction
+                    </li>
+                    <li> Chapter 1: Live in "Day-Tight Compartments" </li>
+                    <li>Chapter 2: A Magic Formula for Solving Worry Situations</li>
+                    <li>Chapter 3: What Worry May Do to You</li>
+                    <li>(More chapters continue...)</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Authors
+                </summary>
+                <p style="margin-left: 22px;">Dale Carnegie
+                </p>
+
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Overview
+                </summary>
+                <p style="margin-left: 22px;">This book provides timeless techniques to eliminate stress and anxiety,
+                    focusing on practical methods to overcome worry and live a fulfilling life. It offers real-life
+                    examples, step-by-step guidance, and strategies for developing a positive mindset. </p>
+
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Purchase Links
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        <a href="https://amzn.in/d/7YyU6v7">Amazon</a>
+                    </li>
+                    <li>
+                        <a href="https://dl.flipkart.com/s/vo_!A8NNNN ">Flipkart</a>
+
+                    </li>
+                </ul>
+            </details>
+
+        </div>
+
+        <div
+            style="margin-left: 35px;margin-top: 30px; font-weight: bold;font-size: 20px;font-family: Arial, Helvetica, sans-serif;">
+            Feedback Form<br><br></div>
+
+        <div class="form-container">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback"></textarea>
+            </div>
+
+            <button class="submit-button" onclick="submitFeedback()">Submit Feedback</button>
+        </div>
+
+
+    </div>
+
+    <!-- Book3details -->
+
+    <div id="book3-details" class="book-details">
+        <div class="book-title"
+            style="display: flex;justify-content: center; font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: 20px;">
+            Book 3: The Power of Your Subconscious Mind </div>
+        <div class="book-image" style="display: flex;justify-content: center;">
+            <img style="width: 230px;height: 290px;margin-top: 20px;border-radius: 20px;" src="public/images/book3.png"
+                alt="">
+        </div>
+        <div>
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Genre
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        Self-help
+                    </li>
+                    <li>Psychology</li>
+
+                </ul>
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Index Page
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        Introduction
+                    </li>
+                    <li>Chapter 1: The Treasure House Within You </li>
+                    <li>Chapter 2: How Your Mind Works</li>
+                    <li>Chapter 3: The Miracle-Working Power of Your Subconscious</li>
+                    <li>(More chapters continue...)</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Authors
+                </summary>
+                <p style="margin-left: 22px;">Joseph Murphy
+                </p>
+
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Overview
+                </summary>
+                <p style="margin-left: 22px;">This book explores the immense potential of the subconscious mind,
+                    teaching readers how to harness its power to achieve success, happiness, and inner peace. It
+                    provides practical techniques for reprogramming thought patterns and using positive affirmations to
+                    overcome obstacles in life. </p>
+
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Purchase Links
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        <a href="https://amzn.in/d/aMNkUcH">Amazon</a>
+                    </li>
+                    <li>
+                        <a href="https://dl.flipkart.com/s/868EBcuuuN">Flipkart</a>
+
+                    </li>
+                </ul>
+            </details>
+
+        </div>
+
+        <div
+            style="margin-left: 35px;margin-top: 30px; font-weight: bold;font-size: 20px;font-family: Arial, Helvetica, sans-serif;">
+            Feedback Form<br><br></div>
+
+        <div class="form-container">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback"></textarea>
+            </div>
+
+            <button class="submit-button" onclick="submitFeedback()">Submit Feedback</button>
+        </div>
+
+
+    </div>
+
+    <!-- book 4 details -->
+    <div id="book4-details" class="book-details">
+        <div class="book-title"
+            style="display: flex;justify-content: center; font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: 20px;">
+            Book 4: Stop Overthinking</div>
+        <div class="book-image" style="display: flex;justify-content: center;">
+            <img style="width: 230px;height: 290px;margin-top: 20px;border-radius: 20px;"
+                src="public/images/book4.jpg" alt="">
+        </div>
+        <div>
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Genre
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        Self-help
+                    </li>
+                    <li>Psychology</li>
+                    <li>Mental Health</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Index Page
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        Introduction
+                    </li>
+                    <li>Chapter 1: Understanding Overthinking and Its Impact </li>
+                    <li>Chapter 2: The Science Behind an Overactive Mind</li>
+                    <li>Chapter 3: Identifying Destructive Thought Patterns</li>
+                    <li>(More chapters continue...)</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Authors
+                </summary>
+                <p style="margin-left: 22px;">Nick Trenton
+                </p>
+
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Overview
+                </summary>
+                <p style="margin-left: 22px;">This book explores the science of overthinking and how to break free from
+                    excessive mental chatter. It provides practical tools to stop rumination, manage stress, and regain
+                    focus. The book emphasizes mindfulness techniques, cognitive restructuring, and daily habits to
+                    cultivate a calmer, more present-focused mindset. </p>
+
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Purchase Links
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        <a href="https://amzn.in/d/1vtIlqY">Amazon</a>
+                    </li>
+                    <li>
+                        <a href="https://dl.flipkart.com/s/nW8ADuNNNN ">Flipkart</a>
+
+                    </li>
+                </ul>
+            </details>
+
+        </div>
+
+        <div
+            style="margin-left: 35px;margin-top: 30px; font-weight: bold;font-size: 20px;font-family: Arial, Helvetica, sans-serif;">
+            Feedback Form<br><br></div>
+
+        <div class="form-container">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback"></textarea>
+            </div>
+
+            <button class="submit-button" onclick="submitFeedback2()">Submit Feedback</button>
+        </div>
+
+
+    </div>
+
+    <!-- book 5 details -->
+
+    <div id="book5-details" class="book-details">
+        <div class="book-title"
+            style="display: flex;justify-content: center; font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: 20px;">
+            Book 5: Quiet: The Power of Introverts in a World That
+            Can't Stop Talking</div>
+        <div class="book-image" style="display: flex;justify-content: center;">
+            <img style="width: 230px;height: 290px;margin-top: 20px;border-radius: 20px;"
+                src="public/images/book5.jpg" alt="">
+        </div>
+        <div>
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Genre
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        Self-help
+                    </li>
+                    <li>Psychology</li>
+                    <li>Young Adult</li>
+                    <li>Parenting</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Index Page
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        Introduction
+                    </li>
+                    <li>Chapter 1: The Science of Introversion </li>
+                    <li>Chapter 2: Introverts at School</li>
+                    <li>Chapter 3: Socializing as an Introvert</li>
+                    <li>(More chapters continue...)</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Authors
+                </summary>
+                <p style="margin-left: 22px;">Susan Cain
+                </p>
+
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Overview
+                </summary>
+                <p style="margin-left: 22px;">Quiet Power is an adaptation for children and teens, as well as their
+                    educators and parents, of Susan Cain's 2012 book Quiet: The Power of Introverts in a World That
+                    Can't Stop Talking. This book delves into the unique strengths of introverted individuals, offering
+                    insights and advice tailored to younger audiences. It covers topics such as thriving in school
+                    environments, navigating social situations, pursuing personal passions, and understanding the
+                    science behind introversion. The book also includes firsthand accounts from introverted teens and
+                    highlights famous figures who have succeeded by embracing their introverted nature. </p>
+
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Purchase Links
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        <a href="https://amzn.in/d/ifzTxat">Amazon</a>
+                    </li>
+                    <li>
+                        <a href="https://dl.flipkart.com/s/nWZ_FuNNNN ">Flipkart</a>
+
+                    </li>
+                </ul>
+            </details>
+
+        </div>
+
+        <div
+            style="margin-left: 35px;margin-top: 30px; font-weight: bold;font-size: 20px;font-family: Arial, Helvetica, sans-serif;">
+            Feedback Form<br><br></div>
+
+        <div class="form-container">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback"></textarea>
+            </div>
+
+            <button class="submit-button" onclick="submitFeedback2()">Submit Feedback</button>
+        </div>
+
+
+    </div>
+    <!-- book 6 deatils -->
+    <div id="book6-details" class="book-details">
+        <div class="book-title"
+            style="display: flex;justify-content: center; font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: 20px;">
+            Book 6:Own Your Anxiety </div>
+        <div class="book-image" style="display: flex;justify-content: center;">
+            <img style="width: 230px;height: 290px;margin-top: 20px;border-radius: 20px;"
+                src="public/images/book6.jpg" alt="">
+        </div>
+        <div>
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Genre
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        Self-help
+                    </li>
+                    <li>Personal Development</li>
+                    <li>Mental Health</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Index Page
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        Introduction
+                    </li>
+                    <li>Chapter 1: Understanding Anxiety as a Strength</li>
+                    <li>Chapter 2: Body: Physical Practices to Manage Anxiety</li>
+                    <li>Chapter 3: Mind: Mental Techniques for Clarity and Focus</li>
+                    <li>(More chapters continue...)</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Authors
+                </summary>
+                <p style="margin-left: 22px;">Julian Brass
+                </p>
+
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Overview
+                </summary>
+                <p style="margin-left: 22px;">This book offers practical lessons to overcome the effects of anxiety by
+                    owning it in three key areas: body, mind, and soul. Personal, personable, and highly motivating, the
+                    book provides 99 actionable techniques to transform anxiety into a secret edge, empowering readers
+                    to lead more fulfilling lives.
+            </details>
+
+            <details>
+                <summary style="cursor: pointer;margin-top: 25px;margin-left: 25px;font-size: 17px;font-weight: bold;">
+                    Purchase Links
+                </summary>
+                <ul style="margin-left: -1px;">
+                    <li>
+                        <a href="https://amzn.in/d/fiSLOvc">Amazon</a>
+                    </li>
+                    <li>
+                        <a href="https://dl.flipkart.com/s/nWp0X4NNNN  ">Flipkart</a>
+
+                    </li>
+                </ul>
+            </details>
+
+        </div>
+
+        <div
+            style="margin-left: 35px;margin-top: 30px; font-weight: bold;font-size: 20px;font-family: Arial, Helvetica, sans-serif;">
+            Feedback Form<br><br></div>
+
+        <div class="form-container">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback"></textarea>
+            </div>
+
+            <button class="submit-button" onclick="submitFeedback2()">Submit Feedback</button>
+        </div>
+
+
+    </div>
+    <footer>
+        <p>&copy; 2025 Book Showcase | All Right Reserved </p>
+
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
